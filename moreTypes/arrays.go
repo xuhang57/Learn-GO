@@ -75,10 +75,40 @@ func main() {
 		fmt.Println("nul!")
 	}
 
+	sample := make([]int, 5)   // len(a) = 5
+	slice := make([]int, 0, 5) // len(b) = 0, cap(b) = 5
+	s = s[1:]                  // len(b) = 4, cap(b) = 4
+
+	board := [][]string{
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+	}
+
+	board[0][0] = "X"
+	board[2][2] = "O"
+	board[1][2] = "X"
+
+	var app []int
+	// func append(s []T, vs ... T) []T
+	app = append(app, 0)
+	app = append(app, 2, 3, 4)
+
+	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
 }
 
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
+
+func rangeCont(pow []int) {
+	for i := range pow {
+		pow[i] = 1 << uint(i) // 2**i
+	}
 }
 
 // array's length is part of its type, so arrays cannot be resized
