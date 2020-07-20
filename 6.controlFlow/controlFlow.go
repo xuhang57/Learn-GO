@@ -8,6 +8,7 @@ import (
 )
 
 func sqrt(x float64) string {
+	/* ( ) are not needed, but { } are required */
 	if x < 0 {
 		return sqrt(-x) + "i"
 	}
@@ -30,11 +31,15 @@ func main() {
 	// }
 	// fmt.Println(sum)
 
+	/* The init and post statements are optional */
+
 	// sum := 1
-	// for sum < 1000 {
+	// for ; sum < 1000;{
 	// 	sum += sum
 	// }
 	// fmt.Println(sum)
+
+	/* For is Go's While --> C's while is spelled for in Go */
 
 	sum := 1
 	for sum < 1000 {
@@ -97,4 +102,10 @@ func main() {
 		defer fmt.Println(i)
 	}
 	fmt.Println("done")
+}
+
+func forever() {
+	for {
+
+	}
 }

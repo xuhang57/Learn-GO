@@ -8,7 +8,7 @@ import (
 // A closure is a function value that references variables from outside its body
 func adder() func(int) int {
 	sum := 0
-	// returns a closure
+	// returns a closure, each closure is bound to its own sum variable
 	return func(x int) int {
 		sum += x
 		return sum
@@ -36,3 +36,8 @@ func main() {
 		)
 	}
 }
+
+/*
+Functions are values too. They can be passed around just like other values
+
+*/

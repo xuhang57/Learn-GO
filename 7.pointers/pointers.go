@@ -19,3 +19,6 @@ func main() {
 // type *T is a pointer to a T value. Its zero value is nil
 // var p *int
 // Unlike C, Go has no arithmetic
+
+// & operator generates a pointer to its operand
+// * operator denotes the pointer's underlying value
