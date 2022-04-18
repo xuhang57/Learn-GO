@@ -8,3 +8,5 @@
 * https://github.com/GoesToEleven/GolangTraining
 
 ## Projects
+
+* https://github.com/kkdai/project52
